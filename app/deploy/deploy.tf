@@ -28,13 +28,13 @@ resource "aws_ecs_service" "this" {
 
   load_balancer {
     target_group_arn = data.aws_lb_target_group.this.arn
-    container_name   = "ci-cd-app"
+    container_name   = "container-technologies01"
     container_port   = 8000
   }
 
 }
 
 resource "aws_cloudwatch_log_group" "this" {
-  name              = "/ecs/ci-cd-app"
+  name              = "/ecs/container-technologies01"
   retention_in_days = 7
 }
